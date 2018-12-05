@@ -1,10 +1,20 @@
 class PuppiesController < ApplicationController
   def index
     @puppies = Puppy.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @puppies }
+    end
   end
 
   def show
     @puppy = current_puppy
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @puppy }
+    end
   end
 
   def new
