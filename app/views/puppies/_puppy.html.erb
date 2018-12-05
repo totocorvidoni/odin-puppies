@@ -1,0 +1,8 @@
+<h3><%= puppy.name %></h3>
+<ul>
+  <li>Age: <%= puppy.age %></li>
+  <li>Cuteness: <%= puppy.cuteness %></li>
+  <li>Softness: <%= puppy.softness %></li>
+</ul>
+<p><%= link_to 'delete puppy', puppy, method: :delete,
+                                      data: { confirm: 'Are you sure?' } %></p>
